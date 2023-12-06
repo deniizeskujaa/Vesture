@@ -23,16 +23,42 @@
             padding: 20px;
         }
 
-        footer {
-            background-color: #b92c2c;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        .box {
+                width: 200px;
+                height: 200px;
+                background-color: lightblue;
+                border: 1px solid #ccc;
+                padding: 20px;
+                cursor: pointer;
+            }
+    
+        .hidden {
+                display: none;
+            }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .connector {
+            width: 20px;
+            height: 2px;
+            background-color: #ccc;
         }
     </style>
+        
+
 </head>
 <body>
 
@@ -44,10 +70,41 @@
         <h2>Welcome to Your Website</h2>
         <p>This is a simple webpage created with HTML, CSS, and JavaScript.</p>
     </section>
+    <div class="box" onclick="toggleParagraph()">
+        Click me!
+        
+        <p class="hidden" id="paragraph">
+            This is a new paragraph that appears when you click the box.
+        </p>
+    </div>
 
-    <footer>
-        <p>&copy; 2023 ug BUGA. All rights reserved.</p>
-    </footer>
+    <script>
+        
+        function toggleParagraph() {
+            var paragraph = document.getElementById("paragraph");
+            paragraph.classList.toggle("hidden");
+        }
+    </script>
+    <div class="container">
+        <!-- First box -->
+        <div class="box">
+            Box 1
+            <div class="connector"></div>
+        </div>
+
+        <!-- Second box -->
+        <div class="box">
+            Box 2
+            <div class="connector"></div>
+        </div>
+
+        <!-- Third box -->
+        <div class="box">
+            Box 3
+        </div>
+    </div>
+
+  
 
 </body>
 </html>
