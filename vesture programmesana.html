@@ -14,35 +14,53 @@
             crossorigin="anonymous"></script>
     
     <style>
+        *{
+            box-sizing: border-box;
+
+        }
+
         header {
             background-color: #333;
             color: #fff;
-            padding: 1em;
             text-align: center;
         }
+
         body {
-            background-color:white;
+            background-image: url('https://media.istockphoto.com/id/1197369584/vector/detailed-world-map-with-countries.jpg?s=612x612&w=0&k=20&c=pW9R8Os-vNEZc1-TKLgHhva-e-OL277-peZdPJKT6Qg=');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
         }
-        ul {
+
+        .nav-container {
             list-style-type: none;
-            margin: 0;
             padding: 0;
             overflow: hidden;
             background-color: #474747;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
+
+        .virsraksts{
+            padding: 10px;
+        }
+
         li {
             float: left;
         }
-        li a, .dropbtn {
+
+        .tab-header, .dropbtn {
             display: inline-block;
             color: white;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
         }
-        li a:hover, .dropdown:hover .dropbtn {
+        .tab-header:hover, .dropdown:hover .dropbtn {
             background-color: red;
         }
+
         li.dropdown {
             display: inline-block;
         }
@@ -69,47 +87,51 @@
 
         .content-section {
             display: none;
-        }
-        #home {
-            display: block;
+            margin: 0 10px;
+            background-color: rgba(195, 209, 204, 0.6);
+            border-radius: 8px;
+            padding: 10px;
         }
        
     </style>   
     <script>
          function openTab(tabName) {
-            var contentSections = document.querySelectorAll('.content-section');
+            const contentSections = document.querySelectorAll('.content-section');
+
             contentSections.forEach(function(section) {
                 section.style.display = 'none';
             });
+
             document.getElementById(tabName).style.display = 'block';
-            var tabs = document.querySelectorAll('li a');
-            tabs.forEach(function(tab) {
-                tab.classList.remove('active');
+
+            const tabHeader = document.querySelectorAll('.tab-header');
+            tabHeader.forEach(function(header) {
+                header.classList.remove('active');
             });
-            var currentTab = document.querySelector('a[href="#' + tabName + '"]');
+            
+            const currentTab = document.querySelector('a[href="#' + tabName + '"]');
             currentTab.classList.add('active');
         } 
+
         document.addEventListener("DOMContentLoaded", function() {
             openTab('Sākums');
         });
-
     </script>
 </head>
 <body>
 
     <header>
-        <h1>Politiskie režīmi</h1>
-    </header>
-
-    <ul>
-        <li><a href="#" id="home" onclick="openTab('Sākums')">Sākums</a></li>
-        <li><a href="#" onclick="openTab('Autoritārisms')">Autoritārism</a></li>
-        <li><a href="#" onclick="openTab('Totalitārisms')">Totalitārisms</a></li>
-        <li><a href="#" onclick="openTab('Demokrātija')">Demokrātija</a></li>
-        <li><a href="#" onclick="openTab('Apkopojums')">Apkopojums</a></li>
-        <li><a href="#" onclick="openTab('VideoMateriāli')">Video materiāli</a></li>
+        <h1 class="virsraksts">Politiskie režīmi</h1>
         
-    </ul>
+        <ul class="nav-container">
+            <li><a href="#" class="tab-header" onclick="openTab('Sākums')">Sākums</a></li>
+            <li><a href="#" class="tab-header" onclick="openTab('Autoritārisms')">Autoritārisms</a></li>
+            <li><a href="#" class="tab-header" onclick="openTab('Totalitārisms')">Totalitārisms</a></li>
+            <li><a href="#" class="tab-header" onclick="openTab('Demokrātija')">Demokrātija</a></li>
+            <li><a href="#" class="tab-header" onclick="openTab('Apkopojums')">Apkopojums</a></li>
+            <li><a href="#" class="tab-header" onclick="openTab('VideoMateriāli')">Video materiāli</a></li>
+        </ul>
+    </header>
 
     <div id="Sākums" class="content-section">
         <h2>Kas ir politiskie režīmi?</h2>
@@ -118,7 +140,11 @@
 
     <div id="Autoritārisms" class="content-section">
         <h2>OKI DOKI?</h2>
-        <p>Definīcija</p>
+        <p>Autoritārisms ir politiskā sistēma, kurai raksturīga varas koncentrācija viena vadoņa rokās. Tai ir raksturīga antidemokrātiska valsts pārvaldes sistēma, kas izveidota, lai nodrošinātu iedzīvotāju bezierunu pakļaušanos vadonim un valsts varai. Vara tiek koncentrēta diktatora rokās, kurš kontrolē visas varas iestādes. Savu varu pār sabiedrību vadonis uztur ar karaspēka, drošības dienestu un paklausīga birokrātiskā aparāta palīdzību. Dažkārt autoritāras varas pretinieki tiek vajāti vai pat fiziski iznīcināti. Autoritārā valstī var notikt vēlēšanas, tomēr tās nav demokrātiskas. Uz galveno valsts amatu parasti kandidē pats diktators, lai viņa vara izskatītos likumīga. Šādu vēlēšanu rezultāts gandrīz vienmēr ir labi paredzams.
+
+            Latvijā Autoritārais Kārļa Ulmaņa režīms pastāvēja no 1934. gada 15. maija līdz 1940. gada 17. jūnijam.
+            
+            Autoritārisms ir valdības sistēma, ko raksturo iedzīvotāju pilnīga pakļaušanās varai, kas ir vērsta pret indivīda brīvībām un kur tiek sagaidīta bezierunu pakļaušanās valsts varai.</p>
     </div>
 
     <div id="Totalitārisms" class="content-section">
@@ -140,12 +166,5 @@
         <h2>14 ZVAIGZNES</h2>
         <p>Definīcija/paragrāfs</p>
     </div>
-
-
-    
-
 </body>
 </html>
-
-
-
