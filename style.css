@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+body {
+    background-image: url('https://media.istockphoto.com/id/1197369584/vector/detailed-world-map-with-countries.jpg?s=612x612&w=0&k=20&c=pW9R8Os-vNEZc1-TKLgHhva-e-OL277-peZdPJKT6Qg=');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.nav-container {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #474747;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.virsraksts {
+    padding: 10px;
+}
+
+.tab-header,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.tab-header:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.content-section {
+    display: none;
+    margin: 0 10px;
+    background-color: rgba(195, 209, 204, 0.6);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.image-container, .video-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image-background, .video-background{
+    padding: 10px;
+    border-radius: 6px;
+    background-color: rgb(180, 180, 180);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bilde, .video{
+    width: 500px;
+}
+
+.task-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.task{
+    text-decoration: none;
+    background-color: #474747;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+.task:hover{
+    background-color: green;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 700px){
+    .bilde, .video{
+        width: 100%;
+    }
+}
